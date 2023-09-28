@@ -6,7 +6,7 @@ export default function iterateThroughObject(reportWithIterator) {
       string += `${elem} `;
       i = true;
     } else {
-      string += `| ${elem} `;
+      string += ` | ${elem}`;
     }
   }
   return string;
