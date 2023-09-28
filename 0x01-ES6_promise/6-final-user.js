@@ -10,13 +10,10 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       if (elem.status === 'fulfilled') {
         arr.push(elem);
       } else {
-        // arr.push({status: elem.status, value: `Error: ${elem.value}`})
-        arr.push(elem);
+        arr.push({ status: elem.status, value: `Error: ${elem.reason.message}` });
+        // arr.push(elem);
       }
     });
     return arr;
-  })
-    .catch((res) => {
-      console.log(res);
-    });
+  });
 }
