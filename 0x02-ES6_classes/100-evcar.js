@@ -6,7 +6,15 @@ export default class EVCar extends Car {
     this._range = range;
   }
 
+  get range() {
+    return this._range;
+  }
+
   cloneCar() {
-    return new Car();
+    return new Car(
+      this._brand,
+      this._motor,
+      this._color,
+    );
   }
 }
