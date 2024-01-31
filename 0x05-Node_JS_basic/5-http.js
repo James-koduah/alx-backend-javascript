@@ -17,7 +17,7 @@ const app = http.createServer((req, res) => {
         res.write(`Number of students in CS: ${cs.length}. List: ${cs.join(', ')}\n`);
         res.write(`Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}`);
         res.end();
-      });
+      }).catch((e) => { res.end(e.message); });
   }
 }).listen('1245');
 
