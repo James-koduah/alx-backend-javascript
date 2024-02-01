@@ -3,12 +3,12 @@ const readDatabase = require('../utils');
 class StudentsController {
   static getAllStudents(request, response) {
     response.writeHead(200, { 'Content-Type': 'text/plain' });
-    response.write('This is the list of our students\n');
     const database = process.argv[2];
     readDatabase(database)
       .then((r) => {
         const cs = r[1];
         const swe = r[2];
+        response.write('This is the list of our students\n');
         response.write(`Number of students in CS: ${cs.length}. List: ${cs.join(', ')}\n`);
         response.write(`Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}`);
         response.end();
