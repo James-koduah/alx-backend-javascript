@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs');
 
 async function readDatabase(path) {
   let data;
@@ -24,5 +24,4 @@ async function readDatabase(path) {
   return [studentNumber, cs, swe];
 }
 
-
-module.exports = readDatabase
+module.exports = readDatabase;
