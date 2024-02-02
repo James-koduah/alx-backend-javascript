@@ -1,7 +1,7 @@
 const chai = require("chai");
-const calculateNumber = require('./2-calcul.js')
-
 const expect = chai.expect;
+
+const calculateNumber = require('./2-calcul.js')
 
 describe('calculateNumber', function() {
   describe('testing Sum', ()=>{
